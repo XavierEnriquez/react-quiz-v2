@@ -1,4 +1,8 @@
-function ResultsScreen({ points, maxPoints, highscore }) {
+import { useQuizContext } from "../contexts/QuizContext";
+
+function ResultsScreen() {
+  const { points, highscore, maxPoints } = useQuizContext();
+
   const percentage = (points / maxPoints) * 100;
   const highestPercent = Math.ceil((highscore / maxPoints) * 100);
 
