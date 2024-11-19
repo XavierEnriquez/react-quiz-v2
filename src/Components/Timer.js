@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { useQuizContext } from "../contexts/QuizContext";
 
-function Timer({ dispatch, secondsTimer }) {
+function Timer() {
+  const { secondsTimer, dispatch } = useQuizContext();
+
   // fixed full App re-renders after every second by managing the timer state at the component level instead of top App level
   const [secondsLeft, setSecondsLeft] = useState(secondsTimer);
   const mins = Math.floor(secondsLeft / 60);
