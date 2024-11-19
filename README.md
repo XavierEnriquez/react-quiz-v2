@@ -1,7 +1,7 @@
 # React-Quiz-V2 Project
 
 This is a project from Udemy "Ultimate React Course 2024: React, Next.js, Redux & More" by Jonas Schmedtmann.
-Section 18: Advanced State Management: The Context API / Lecture: 241: CHALLENGE #2: Refactoring "React Quiz" form the Section 16: The Advanced useReducer Hook / Lecture: 190
+Section 18: Advanced State Management: The Context API / Lecture: 241: CHALLENGE #2: Refactoring "React Quiz" from Section 16: The Advanced useReducer Hook / Lecture: 190
 
 ## Local Development Scripts
 
