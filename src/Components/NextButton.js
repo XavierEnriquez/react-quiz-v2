@@ -1,6 +1,9 @@
-function NextButton({ dispatch, answer, index, numQuestions, status }) {
-  if (answer === null) return null;
-  if (index < numQuestions - 1)
+import { useQuizContext } from "../contexts/QuizContext";
+
+function NextButton() {
+  const { status, index, answer, numQuestions, dispatch } = useQuizContext();
+
+  if (answer !== null && index < numQuestions - 1)
     return (
       <button
         className="btn btn-ui"
@@ -9,7 +12,8 @@ function NextButton({ dispatch, answer, index, numQuestions, status }) {
         Next
       </button>
     );
-  if (index === numQuestions - 1)
+
+  if (status !== "finished" && answer !== null && index === numQuestions - 1)
     return (
       <button
         className="btn btn-ui"
@@ -18,6 +22,7 @@ function NextButton({ dispatch, answer, index, numQuestions, status }) {
         Get Results
       </button>
     );
+
   if (status === "finished")
     return (
       <button
